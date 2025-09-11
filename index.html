@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StreamFlix - Filmes e Séries Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-left">
+                <h1 class="logo">StreamFlix</h1>
+                <nav class="nav-menu">
+                    <a href="#" class="nav-link active" data-section="inicio">Início</a>
+                    <a href="#" class="nav-link" data-section="series">Séries</a>
+                    <a href="#" class="nav-link" data-section="filmes">Filmes</a>
+                    <a href="#" class="nav-link" data-section="minha-lista">Minha Lista</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Buscar filmes e séries..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                </div>
+                <div class="profile">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Perfil" class="profile-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="heroSection">
+            <div class="hero-content">
+                <h2 class="hero-title">Stranger Things</h2>
+                <p class="hero-description">Uma série sobrenatural ambientada nos anos 80. Quando um jovem desaparece, uma pequena cidade descobre segredos sombrios, experimentos governamentais e criaturas sobrenaturais.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="heroPlayBtn">▶ Assistir</button>
+                    <button class="btn btn-secondary" id="heroListBtn">+ Minha Lista</button>
+                </div>
+            </div>
+            <div class="hero-bg">
+                <img src="https://images.unsplash.com/photo-1489599896549-b5830b09b38e?w=1200&h=600&fit=crop" alt="Stranger Things" class="hero-img">
+            </div>
+        </section>
+
+        <!-- Content Sections -->
+        <div class="content-sections">
+            <!-- Trending Now -->
+            <section class="content-row">
+                <h3 class="row-title">Trending Now</h3>
+                <div class="content-slider" id="trendingSlider">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Netflix Originals -->
+            <section class="content-row">
+                <h3 class="row-title">Netflix Originals</h3>
+                <div class="content-slider" id="originalsSlider">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Action Movies -->
+            <section class="content-row">
+                <h3 class="row-title">Filmes de Ação</h3>
+                <div class="content-slider" id="actionSlider">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Comedies -->
+            <section class="content-row">
+                <h3 class="row-title">Comédias</h3>
+                <div class="content-slider" id="comedySlider">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Horror Movies -->
+            <section class="content-row">
+                <h3 class="row-title">Filmes de Terror</h3>
+                <div class="content-slider" id="horrorSlider">
+                    <!-- Content will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Search Results -->
+            <section class="content-row hidden" id="searchResults">
+                <h3 class="row-title">Resultados da Busca</h3>
+                <div class="search-grid" id="searchGrid">
+                    <!-- Search results will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- My List -->
+            <section class="content-row hidden" id="myListSection">
+                <h3 class="row-title">Minha Lista</h3>
+                <div class="content-slider" id="myListSlider">
+                    <!-- My list will be populated by JavaScript -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Video Player Modal -->
+    <div class="modal hidden" id="videoModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="video-container">
+                <video class="video-player" id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Seu navegador não suporta o elemento de vídeo.
+                </video>
+            </div>
+            <div class="video-info">
+                <h3 class="video-title" id="videoTitle"></h3>
+                <div class="video-meta">
+                    <span class="video-year" id="videoYear"></span>
+                    <span class="video-rating" id="videoRating"></span>
+                    <span class="video-duration" id="videoDuration"></span>
+                </div>
+                <p class="video-description" id="videoDescription"></p>
+                <div class="video-actions">
+                    <button class="btn btn-primary" id="modalPlayBtn">▶ Assistir</button>
+                    <button class="btn btn-secondary" id="modalListBtn">+ Minha Lista</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">Sobre</a>
+                    <a href="#">Ajuda</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Carreiras</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Imprensa</a>
+                    <a href="#">Investidores</a>
+                    <a href="#">Legal</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2025 StreamFlix. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
